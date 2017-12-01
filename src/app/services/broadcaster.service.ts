@@ -27,6 +27,10 @@ export class BroadcasterService {
       this.playSound(this.id);
     }.bind(this));
 
+    this.socket.on('clients', function(data){
+      console.log(data);
+    });
+
   }
 
   public playSound(clientId): void {
