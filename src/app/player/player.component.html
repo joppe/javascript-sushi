@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Play sound</h1>
+    <div class="row">
+        <div class="s12">
+            <div class="progress" [style.display]="loaded !== true ? 'block' : 'none'">
+                <div class="indeterminate"></div>
+            </div>
+            <app-button [disabled]="disabled" (handleClick)="play()">
+                <i class="material-icons small left">play_arrow</i>
+                Play
+            </app-button>
+        </div>
+    </div>
+</div>
