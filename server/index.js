@@ -8,13 +8,12 @@ http.listen(3000, function(){
 
 io.on('connection', function(socket){
   console.log('a user connected');
-
-  socket.emit('clients', io.sockets.clients());
+  socket.emit('clients', Object.keys(io.sockets.clients().sockets));
 
   socket.on('disconnect', function(){
     console.log('user disconnected');
 
-    socket.emit('clients', io.sockets.clients());
+    socket.emit('clients', Object.keys(io.sockets.clients().sockets));
   });
 
   socket.on('play sound at', function(id){
