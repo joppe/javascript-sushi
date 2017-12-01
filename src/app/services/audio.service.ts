@@ -12,6 +12,7 @@ export class AudioService {
             audio.addEventListener('canplaythrough', () => {
                 resolve(audio);
             });
+
             audio.addEventListener('error', () => {
                 reject(audio);
             });

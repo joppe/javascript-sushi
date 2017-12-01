@@ -1,1 +1,16 @@
-<app-player [src]="'/assets/audio/beep-09.mp3'"></app-player>
+<div
+  class="client"
+  *ngFor="let client of clients"
+>
+    <div>
+        <i class="material-icons large">computer</i>
+    </div>
+
+    <app-button
+        (handleClick)="playSound(client)"
+    >
+        <i class="material-icons small left">play_arrow</i>
+        Play
+    </app-button>
+</div>
+

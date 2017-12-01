@@ -17,7 +17,7 @@ io.on('connection', function(socket){
     io.emit('clients', Object.keys(io.sockets.clients().sockets));
   });
 
-  socket.on('play sound at', function(id){
+  socket.on('play', function(id){
     socket.to(id).emit('play sound');
   });
 });

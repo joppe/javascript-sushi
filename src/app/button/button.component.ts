@@ -6,7 +6,6 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 })
 export class ButtonComponent {
     @Input() private disabled: boolean;
-
     @Output() private handleClick: EventEmitter<void>;
 
     constructor() {
